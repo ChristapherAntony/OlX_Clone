@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { FirebaseContext } from '../../store/FirebaseContext';
+import { FirebaseContext } from '../../store/Context';
 import Logo from '../../olx-logo.png';
 import './Login.css';
 
@@ -24,7 +24,7 @@ function Login() {
   return (
     <div>
       <div className="loginParentDiv">
-        <img width="200px" height="200px" src={Logo} alt=""></img>
+        <img style={{cursor:'pointer'}}  onClick={()=>{history.push('/')}} width="200px" height="200px" src={Logo} alt=""></img>
         <form onSubmit={handleLogin}>
           <label htmlFor="fname">Email</label>
           <br />

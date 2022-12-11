@@ -1,7 +1,7 @@
 import React, { useState,useContext } from 'react';
 
 import Logo from '../../olx-logo.png';
-import { FirebaseContext } from '../../store/FirebaseContext';
+import { FirebaseContext } from '../../store/Context';
 import './Signup.css';
 import {Link, useHistory} from 'react-router-dom'
 
@@ -31,7 +31,7 @@ export default function Signup() {
   return (
     <div>
       <div className="signupParentDiv">
-        <img width="200px" height="200px" alt='' src={Logo}></img>
+        <img style={{cursor:'pointer'}}  onClick={()=>{history.push('/')}}  width="200px" height="200px" alt='' src={Logo}></img>
         <form onSubmit={handleSubmit}>
           <label htmlFor="fname">Username</label>
           <br />
