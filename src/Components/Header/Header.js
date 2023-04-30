@@ -13,11 +13,15 @@ function Header() {
   const { user } = useContext(AuthContext)
   const {firebase} = useContext(FirebaseContext)
   const history=useHistory()
+  
   return (
     <div className="headerParentDiv">
       <div className="headerChildDiv">
-        <div className="brandName">
-          <OlxLogo></OlxLogo>
+        <div className="brandName" onClick={()=>{history.push('/')}} >
+          
+          <OlxLogo ></OlxLogo>
+          
+         
         </div>
         <div className="placeSearch">
           <Search></Search>

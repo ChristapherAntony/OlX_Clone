@@ -1,3 +1,7 @@
+.brandName{
+  cursor: pointer;
+}
+
 .headerParentDiv {
   padding: 10px;
   background-color: whitesmoke;
